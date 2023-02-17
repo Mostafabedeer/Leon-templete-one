@@ -1,0 +1,95 @@
+/* rem and em do not depend on HTML FONT SIZE
+in media queries istead 1rem = 1em = 16px
+ */
+
+/*********************/
+/* Below 1248px (smaller desktops) */
+/*********************/
+
+@media (max-width: 78em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/*********************/
+/* Below 944px (Taplates) */
+/*********************/
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  .hero {
+    top: 20%;
+  }
+  .hero-text {
+    font-size: 2rem;
+  }
+  .services-img-box {
+    grid-column: 1/-1;
+    width: 40%;
+    justify-self: center;
+  }
+}
+/*********************/
+/* Below 728px (Smaller Taplates) */
+/*********************/
+@media (max-width: 45.5em) {
+  html {
+    font-size: 50%;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(30rem, 1fr));
+    align-items: center;
+    gap: 6rem;
+  }
+  .hero-text {
+    font-size: 1.6rem;
+  }
+  .about-img-box {
+    justify-self: center;
+    width: 40%;
+    text-align: center;
+  }
+  .about-img-box::before {
+    position: absolute;
+    content: "";
+
+    right: 20%;
+  }
+  .about-img-box::after {
+    right: 10%;
+  }
+}
+
+/*********************/
+/* Below 600px (Phones) */
+/*********************/
+@media (max-width: 37.5em) {
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+  .heading-secondary {
+    font-size: 7.6rem;
+    margin-bottom: -2rem;
+  }
+  .subheading {
+    font-size: 1.2rem;
+  }
+  .contact-text {
+    font-size: 2.4rem;
+  }
+  .contact-email {
+    font-size: 2.4rem;
+    margin: 0 0 1rem 2rem;
+  }
+  .contact-box {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .contact {
+    text-align: center;
+  }
+}

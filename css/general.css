@@ -1,0 +1,111 @@
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --main-heading2-color: #5e6d71;
+  --main-heading3-color: #36484e;
+  --main-subheading-color: #eaebed;
+  --main-padding-section: 7rem 0 7rem 0;
+}
+
+html {
+  /* font-size: 16px; */
+  /* 10px / 16px = 0.625 =62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* does not work on safari */
+  /* scroll-behavior: smooth; */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+
+  color: #6d6c6c;
+  line-height: 1;
+  /* Only works if there is nothing abslolutly positioned
+  in relation to body
+   */
+  overflow-x: hidden;
+}
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #70dfd4;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.5rem #70dfd4;
+}
+
+.container {
+  /* 1170px */
+  max-width: 117rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 3rem;
+  align-items: center;
+}
+.flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertairy {
+  letter-spacing: -0.5px;
+}
+.heading-primary {
+  font-weight: 700;
+  font-size: 5.6rem;
+  color: var(--main-color);
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+.heading-secondary {
+  display: block;
+  font-size: 12.6rem;
+  font-weight: 800;
+  color: var(--main-subheading-color);
+
+  margin-bottom: -3.5rem;
+  letter-spacing: -0.7rem;
+
+  /* font-weight: 500;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+  color: var(--main-heading2-color); */
+}
+.heading-tertairy {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+  color: var(--main-heading3-color);
+}
+.subheading {
+  font-weight: 500;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+  color: var(--main-heading2-color);
+}
+.section-heading {
+  text-align: center;
+  margin-bottom: 10rem !important;
+}
+.visibel {
+  display: block;
+}
+.main-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
